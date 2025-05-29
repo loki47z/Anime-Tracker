@@ -1,0 +1,18 @@
+<%- include('partials/header') %>
+<h1 class="search-anime">Search Anime</h1>
+<form action="/search" method="GET" id="search-form">
+    <input type="text" name="q" placeholder="Search for an anime..." required>
+    <button type="submit">Search</button>
+</form>
+<% if(results.length > 0) { %>
+    <h2>Search Results:</h2>
+    <ul class="anime-list">
+        <% results.forEach(anime => { %>
+            <li>
+                <img src="<%= anime.images.jpg.image_url %>" alt="<%= anime.title %>">
+                <h2><%= anime.title %></h2>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>
+<%- include('partials/footer') %>
