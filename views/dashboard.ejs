@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+<h1><%= user.username %>'s Dashboard</h1>
+<div class="dashboard">
+    <h2>My Anime List</h2>
+    <% if (animeList) { %>
+        <ul class="anime-list">
+            <% animeList.forEach(anime => { %>
+                <li>
+                    <img src="<%= anime.image_url %>" alt="<%= anime.title %>">
+                    <h3><%= anime.title %></h3>
+                    <p>Status: <%= anime.status %></p>
+                    <form action="/anime/update-status" method="post">
+                        <input type="hidden" name="mal_id" value="<%= anime.mal_id %>">
+                        <select name="status">
+                            <option value="Watching" <%= anime.status === 'Watching' ? 'selected' : '' %>>Watching</option>
+                            <option value="Completed" <%= anime.status === 'Completed' ? 'selected' : '' %>>Completed</option>
+                            <option value="On-Hold" <%= anime.status === 'On-Hold' ? 'selected' : '' %>>Plan To Watch</option>
+                        </select>
+                        <button type="submit">Update Status</button>
+                    </form>
+                    <form action="/anime/remove" method="post">
+                        <input type="hidden" name="mal_id" value="<%= anime.mal_id %>">
+                        <button type="submit">Remove from List</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No anime in your list yet.</p>
+    <% } %>
+<%- include('partials/footer') %>

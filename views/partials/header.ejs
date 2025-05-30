@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/index.css">
     <title><%= title %></title>
 </head>
 <body>
     <nav>
-        <a href="/">Home</a>
-        <a href="/search">Search Anime</a>
-        <a href="/dashboard/<%= user ? user.username : '' %>">Dashboard</a>
+        <div>
+            <a href="/">Home</a>
+            <a href="/search">Search Anime</a>
+            <a href="/dashboard/<%= user ? user.username : '' %>">Dashboard</a>
+        </div>
+        <div>
+            <a href="/logout" id="logout">Logout</a>
+        </div>
     </nav>
     <main>

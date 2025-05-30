@@ -10,7 +10,8 @@ const animeSchema = new mongoose.Schema({
 
 const userSchema = new mongoose.Schema({
     username: {type: String, required:true, unique:true},
-    animeSchema: [animeSchema]
+    password: {type: String},
+    animeList: [animeSchema]
 })
 
 module.exports = mongoose.model('User', userSchema)

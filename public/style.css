@@ -1,0 +1,100 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background: linear-gradient(to bottom, #c20033, #1a0a2b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Container */
+.login-container {
+  background: linear-gradient(to bottom right, #300334, #140017);
+  padding: 40px 30px;
+  border-radius: 30px;
+  width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.login-container h1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: white;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #3e0d2d;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #e60042, #8b0032);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(to right, #ff004f, #b30044);
+}
+
+/* Register Link */
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #ff4f85;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Message styling */
+.success-message {
+  margin-top: 20px;
+  color: #4caf50;
+}
+
+.error-message {
+  margin-top: 20px;
+  color: #f44336;
+}

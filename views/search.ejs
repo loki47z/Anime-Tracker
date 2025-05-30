@@ -11,6 +11,18 @@
             <li>
                 <img src="<%= anime.images.jpg.image_url %>" alt="<%= anime.title %>">
                 <h2><%= anime.title %></h2>
+                <form action="/anime/add" method="post">
+                    <input type="hidden" name="mal_id" value="<%= anime.mal_id %>">
+                    <input type="hidden" name="title" value="<%= anime.title %>">
+                    <input type="hidden" name="image_url" value="<%= anime.images.jpg.image_url %>">
+                    <input type="hidden" name="genres" value="<%= anime.genres.map(genre => genre.name).join(', ') %>">
+                    <select name="status">
+                        <option value="Watching">Watching</option>
+                        <option value="Completed">Completed</option>
+                        <option value="On-Hold">Plan To Watch</option>
+                    </select>
+                    <button type="submit">Add to List</button>
+                </form>
             </li>
         <% }) %>
     </ul>
