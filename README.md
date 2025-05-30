@@ -88,28 +88,28 @@ The Anime Tracker Web App is a simple web application designed to help users sea
 
 ## 📂 Project Structure
 
-*.
-*├── models/
-*│   └── User.js          # Mongoose schema for User and embedded Anime data
-*├── public/
-*│   ├── css/
-*│   │   └── index.css    # Stylesheets for the application
-*│   └── # other static assets (e.g., images, js)
-*├── routes/
-*│   └── route.js         # Defines all application routes (login, search, dashboard, etc.)
-*├── views/
-*│   ├── dashboard.ejs    # User dashboard page
-*│   ├── index.ejs        # Home page
-*│   ├── login.ejs        # User login form
-*│   ├── register.ejs     # User registration form
-*│   └── search.ejs       # Anime search results page
-*│   └── partials/        # Reusable EJS partials (header, footer)
-*│       ├── footer.ejs
-*│       └── header.ejs
-*├── .env                 # Environment variables
-*├── app.js               # Main Express application file
-*├── package.json         # Project metadata and dependencies
-*└── README.md            # This file
+* .
+* ├── models/
+* │   └── User.js          # Mongoose schema for User and embedded Anime data
+* ├── public/
+* │   ├── css/
+* │   │   └── index.css    # Stylesheets for the application
+* │   └── # other static assets (e.g., images, js)
+* ├── routes/
+* │   └── route.js         # Defines all application routes (login, search, dashboard, etc.)
+* ├── views/
+* │   ├── dashboard.ejs    # User dashboard page
+* │   ├── index.ejs        # Home page
+* │   ├── login.ejs        # User login form
+* │   ├── register.ejs     # User registration form
+* │   └── search.ejs       # Anime search results page
+* │   └── partials/        # Reusable EJS partials (header, footer)
+* │       ├── footer.ejs
+* │       └── header.ejs
+* ├── .env                 # Environment variables
+* ├── app.js               # Main Express application file
+* ├── package.json         # Project metadata and dependencies
+* └── README.md            # This file
 
 ## 🙏 Acknowledgements
 * [Jikan API](https://jikan.moe/) for providing anime data.
