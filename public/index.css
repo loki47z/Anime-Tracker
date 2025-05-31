@@ -206,8 +206,7 @@ h2 {
 }
 
 footer{
-    text-align: center; /* This is the line to add/change */
-    padding: 2rem;
+    text-align: center;
     margin-top: 3rem;
     background-color: #0d0d0d;
     color: #888;
